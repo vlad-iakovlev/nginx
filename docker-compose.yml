@@ -1,13 +1,13 @@
 networks:
-  vlad-yakovlev-dev:
-    name: vlad-yakovlev-dev
+  vlad-iakovlev-dev:
+    name: vlad-iakovlev-dev
 
 services:
   nginx:
     image: nginxproxy/nginx-proxy:latest
     pull_policy: always
     networks:
-      - vlad-yakovlev-dev
+      - vlad-iakovlev-dev
     ports:
       - 80:80
       - 443:443
@@ -25,7 +25,7 @@ services:
     image: nginxproxy/acme-companion:latest
     pull_policy: always
     networks:
-      - vlad-yakovlev-dev
+      - vlad-iakovlev-dev
     environment:
       - DEFAULT_EMAIL=vlad309523@gmail.com
     volumes_from:
